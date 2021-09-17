@@ -1,16 +1,7 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
 {% load static %}
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Remake Barber - Blog Details</title>
-	<link rel="icon" href="img/favicon.png" type="image/png">
-
-  <link rel="stylesheet" href="http://127.0.0.1:8000/static/styles.min.css">
-</head>
+{% block title %}{{post.title}}{% endblock %}
 <body>
   <!--================Header Menu Area =================-->
 {% block content %}
@@ -28,8 +19,8 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav justify-content-center">
-              <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/contact/">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" style="color:#3a414e" href="http://127.0.0.1:8000">Home</a></li>
+              <li class="nav-item"><a class="nav-link" style="color:#3a414e" href="http://127.0.0.1:8000/contact/">Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right navbar-social">
               <li><a href="#"><i class="ti-facebook"></i></a></li>
@@ -49,11 +40,11 @@
     <div class="container">
       <div class="hero-banner hero-banner--sm">
         <div class="hero-banner__content">
-          <h1>Blog details</h1>
+          <h1>{{post.title}}</h1>
           <nav aria-label="breadcrumb" class="banner-breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="http://127.0.0.1:8000">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
+              <li class="breadcrumb-item active" aria-current="page">{{post.title}}</li>
             </ol>
           </nav>
         </div>
