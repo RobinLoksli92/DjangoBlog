@@ -33,6 +33,7 @@ def index(request):
         'most_popular_posts': [serialize_post(post) for post in popular_posts],
         'fresh_posts': [serialize_post(post) for post in fresh_posts],
     }
+
     return render(request, 'index.html', context)
 
 
@@ -80,3 +81,4 @@ def contact(request):
     ).add_to(folium_map)
     html_map = folium_map._repr_html_()
     return render(request, 'contact.html', {"html_map": html_map})
+

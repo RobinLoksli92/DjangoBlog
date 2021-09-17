@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="http://127.0.0.1:8000/static/styles.min.css">
 </head>
 <body>
+{% for post in most_popular_posts %}
+  <h4>{{post}}</h4>
+{% endfor %}
   <!--================Header Menu Area =================-->
   <header class="header_area">
     <div class="main_menu">
